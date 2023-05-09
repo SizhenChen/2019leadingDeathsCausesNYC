@@ -146,7 +146,7 @@ let dropArray = [
     "fullName": "Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86)",
     "name": "Accidents Except Drug Poisoning",
     "image": "imgs/意外.png",
-    "comment": `This is a cause of death that is not under my surveillance. Most of them are products of modernization.<br>
+    "comment": `This is a cause of death that is not under my surveillance. It's not a surprise that most of them are products of modernization.<br>
               <br>
               For me, it just means more work.`
   },
@@ -156,7 +156,7 @@ let dropArray = [
     "name": "Chronic Liver Disease and Cirrhosis",
     "image": "imgs/肝硬化.png",
     "comment": `Ugh, I googled this guy's portfolio and those are the grossest images I've ever seen ...
-               not really, I'm death for god sake, but you certainly should quit drinking if it does that to your liver.`
+               not really, I'm death for god sake, but you certainly should quit drinking alcohol if it does that to your liver.`
   },
 
   {
@@ -335,6 +335,8 @@ function retrieveData() {
 
     console.log('data retrieved')
 
+    // document.getElementById("Map").clear()
+
     drawMap()
 
     });
@@ -342,7 +344,6 @@ function retrieveData() {
 
 
 function drawMap(){
-  document.getElementById("Map").clear()
 
   var sketch2 = function (f2) {
     f2.xArray = []
@@ -371,7 +372,7 @@ function drawMap(){
   
     f2.draw = function () {
       f2.background(255, 0)
-      f2.frameRate(19)
+      f2.frameRate(18)
       // console.log("all Death reasure: "+allDeathCounts/10)
   
       for (let i = 0; i < f2.int(allDeathCounts / 10); i++) {
