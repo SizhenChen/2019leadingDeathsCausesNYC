@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <!-- CDN file, 到url里找library-->
+    <!-- <script src="https://unpkg.com/ps.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rpn3sfg.css">
+</head>
+
+<body>
+
+    <div id="bg">
+    </div>
+
+    <a id="title" style="left: 50%; transform:translate(-50%,0%); font-size:larger;position: absolute;">
+        <h1>NYC Leading Causes of Death</h1>
+    </a>
+
+    <!-- 大区间 -->
+    <div style="display: flex; flex-wrap: wrap; margin-bottom: 3rem;">
+        <!-- 第一区 -->
+        <div class="container" id="leftToRight" style="float: left; width:450px; height: 510px;">
+
+            <div style="float: left;">
+                <button onclick="causesDrop()" class="dropBtn">Leading Causes</button>
+                <select class="dropContent" id="diseasesDropdown">
+                    <option value="Diseases of Heart (I00-I09, I11, I13, I20-I51)">Diseases of Heart</option>
+                    <option value="Malignant Neoplasms (Cancer: C00-C97)">Malignant Neoplasms (Cancer)</option>
+                    <option
+                        value="Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44)">
+                        Mental and Behavioral Disorders due to Accidental Poisoning
+                    </option>
+                    <option value="Diabetes Mellitus (E10-E14)">Diabetes Mellitus</option>
+                    <option value="Influenza (Flu) and Pneumonia (J09-J18)">Influenza (Flu) and Pneumonia</option>
+                    <option value="Cerebrovascular Disease (Stroke: I60-I69)">Cerebrovascular Disease (Stroke)
+                    </option>
+                    <option value="Accidents Except Drug Poisoning (V01-X39, X43, X45-X59, Y85-Y86)">Accidents Except
+                        Drug
+                        Poisoning</option>
+                    <option value="Chronic Liver Disease and Cirrhosis (K70, K73-K74)">Chronic Liver Disease and
+                        Cirrhosis
+                    </option>
+                    <option value="Chronic Lower Respiratory Diseases (J40-J47)">Chronic Lower Respiratory Diseases
+                    </option>
+                    <option value="Essential Hypertension and Renal Diseases (I10, I12)">Essential Hypertension and
+                        Renal
+                        Disease</option>
+                    <option value="Intentional Self-Harm (Suicide: U03, X60-X84, Y87.0)">Intentional Self-Harm</option>
+                    <option value="Alzheimer's Disease (G30)">Alzheimer's Disease</option>
+                    <option value="Assault (Homicide: U01-U02, Y87.1, X85-Y09)">Assault (Homicide)
+                    </option>
+                    <option value="All Other Causes">All Other Causes</option>
+                </select>
+            </div>
+
+            <div id="profiles" style="margin-top: 7rem;">
+                <img src="imgs/default.png" id="Image">
+                <div id="Name">choose the employee</div>
+            </div>
+        </div>
+
+
+        <!-- 第二区 -->
+        <div class="container" id="rightToLeft" style="margin-top: 2rem; flex-grow: 1; height: 500px;">
+            <div style="float: right; margin-left: 2rem;">
+                <button onclick="raceDrop()" class="dropBtn" id="raceBtn">Race</button>
+
+                <select class="dropContent" id="raceDropdown">
+                    <option value="Hispanic">Hispanic</option>
+                    <option value="Asian and Pacific Islander">Asian and Pacific Islander</option>
+                    <option value="Non-Hispanic White">Non-Hispanic White</option>
+                    <option value="Non-Hispanic Black">Non-Hispanic Black</option>
+                    <option value="Other Race/ Ethnicity">Other Race/ Ethnicity</option>
+                    <option value="Not Stated/Unknown">Not Stated/Unknown</option>
+                </select>
+            </div>
+
+            <div style="float: right;">
+                <button onclick="sexDrop()" class="dropBtn" id="sexBtn">Sex</button>
+
+                <select class="dropContent" id="sexDropdown" style="margin-right: 0;">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <div id="mapContainer" style="margin-top: 7rem; ">
+                <div id="counts" style="float: right; width: 18rem; margin-top: 2.5rem;">
+                    <button class="dropBtn" id="generateBtn" onclick="retrieveData()"> Generate </button>
+                    <h3 id="generateTotal" style="margin: 1rem;margin-top: 2rem;"></h3>
+                    <h6 id="generateSex" style="margin: 0.2rem;"></h6>
+                    <h6 id="generateRace" style="margin: 0.2rem;"></h6>
+                    <h5 id="generateSexAndRace" style="margin-top: 1.5rem;"></h5>
+                </div>
+                <div id="Map" style="display: inline-block; margin-top: 1rem;"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 死神评论 -->
+    <div class="container" id= "commentContainer" style="display: flex;">
+        <img src="imgs/死神.png" style="width:15rem; margin-left: 1rem;">
+
+        <div id= "comment" style="overflow: auto; display: inline-block; margin: 1rem; margin-top: 1rem; text-align: left;">
+            <h4>Hey, choose the disease that you're interested on the left. Then go 
+                the right to choose the victims' sex and race. Click on the generate button 
+                to see the moving image.<br>
+                <br>
+                What? Why does the sex only have female and male? Uhhh perhaps the statistician died 
+                like 50 years ago so the system is behind.<br>
+                <br>
+                We have limited resources so don't ask me these questions!
+            </h4>
+        </div>
+    </div>
+
+    <script src="script.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+
+</html>

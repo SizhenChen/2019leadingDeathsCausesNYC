@@ -1,0 +1,209 @@
+body{
+    /* background: url(imgs/bloodRain.png); */
+    /* background-size: 60%; */
+    margin: 0;
+    font-family: hobeaux, sans-serif;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container{
+    margin: 2rem 3rem;
+}
+
+#rightToLeft{
+    float: right;
+}
+
+.dropBtn {
+    background-color: #e14071;
+    box-shadow: 3px 3px 0px;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.8rem;
+    font-family: hobeaux, sans-serif;
+    font-weight: 700;
+    border-radius: 1rem;
+    border: 3px solid black;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px 0 rgba(0,0,0);
+    margin-bottom: 0.1rem;
+}
+
+.dropBtn:hover{
+    background-color: #b91849;
+}
+
+.dropBtn:active{
+    box-shadow: 0px 0px 0;
+    transform: translate(2px, 2px);
+}
+
+.dropContent{
+    display: none;
+    background-color: #dfe1f7;
+    margin: 0.5rem 0rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 1rem;
+    border: 2px, solid, black;
+    border-radius: 1rem;
+    font-family: hobeaux, sans-serif;
+    box-shadow: 0px 0px 0px 1.5px;
+    width: 30rem;
+}
+
+select > option{
+    cursor: pointer;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.show {display:block;}
+
+#profiles{
+    background-color: white;
+    /* color: white; */
+    /* margin-top: 2rem; */
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: hobeaux, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+#Name{
+    margin-bottom: 1rem;
+}
+
+#Image{
+    width: 25rem;
+}
+
+#mapContainer{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: hobeaux, sans-serif;
+    height: 510px;
+}
+
+/* #Map{
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    border-radius: 1rem;
+    padding: 1rem;
+} */
+
+#raceDropdown{
+    width: 13rem;
+    margin-right: 0;
+}
+
+#sexBtn{
+    margin-left: 0rem;
+}
+
+#sexDropdown{
+    width: 6rem;
+    margin-right:0; 
+}
+
+#generateBtn{
+    margin: 1rem;
+    background-color: rgb(255, 205, 80);
+    color: black;
+    font-size: 2.5rem;
+}
+
+#commentContainer{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: hobeaux, sans-serif;
+    height: 15rem;
+    margin-top: 10rem;
+}
+
+#comment{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1100px){
+    #leftToRight{
+        margin-bottom: 10rem;
+    }
+    #title{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        margin: 1rem;
+        margin-top: 2rem;
+    }
+
+    .dropBtn{
+        font-size: 1.2rem;
+        margin-bottom: 0.05rem;
+    }
+
+    #generateBtn{
+        font-size: 2rem;
+    }
+
+    #rightToLeft{
+        float: left;
+        margin: 0rem 1rem;
+    }
+    
+    .dropContent{
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    #profiles{
+        width: 26rem;
+    }
+
+    #Name{
+        font-size: 1.2rem;
+    }
+
+    #Image{
+        width: 100%;
+    }
+
+    #mapContainer{
+        height: 800px;
+    }
+
+    #Map{
+        width: 100%;
+        height: 100%;
+    }
+}
