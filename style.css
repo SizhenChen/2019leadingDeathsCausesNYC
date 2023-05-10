@@ -18,6 +18,9 @@ body{
 
 #rightToLeft{
     float: right;
+    margin-top: 2rem;
+    flex-grow: 1; 
+    height: 500px;
 }
 
 .dropBtn {
@@ -91,26 +94,6 @@ select:hover {
     width: 25rem;
 }
 
-#mapContainer{
-    background-color: #ffffff;
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
-    border-radius: 1rem;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.8rem;
-    font-weight: 900;
-    font-family: hobeaux, sans-serif;
-    height: 510px;
-}
-
-/* #Map{
-    background-color: #ffffff;
-    margin-bottom: 2rem;
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
-    border-radius: 1rem;
-    padding: 1rem;
-} */
-
 #raceDropdown{
     width: 13rem;
     margin-right: 0;
@@ -132,6 +115,49 @@ select:hover {
     font-size: 2.5rem;
 }
 
+#generateTotal{
+    margin: 1rem; margin-top: 2rem;
+}
+
+#generateSex{
+    margin: 0.2rem;
+}
+
+#generateRace{
+    margin: 0.2rem;
+}
+
+#generateSexAdnRace{
+    margin-top: 1.5rem;
+}
+
+#mapContainer{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    border-radius: 1rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: hobeaux, sans-serif;
+    height: 525px;
+    margin-top: 7rem; 
+}
+
+#Map{
+    /* background-color: #e14071; */
+    padding: 1rem;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#counts{
+    float: right; 
+    width: 18rem; 
+    padding: 0;
+    margin-top: 2.5rem;
+}
+
 #commentContainer{
     background-color: #ffffff;
     box-shadow: 0px 0px 0px 2px rgba(0,0,0);
@@ -149,17 +175,125 @@ select:hover {
     background-color: #ffffff;
     box-shadow: 0px 0px 0px 4px rgba(0,0,0);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
-@media screen and (max-width: 1100px){
-    #leftToRight{
-        margin-bottom: 10rem;
-    }
+#title{
+    left: 50%; 
+    transform:translate(-50%,0%); 
+    font-size:3rem; 
+    font-weight: 700; 
+    margin-top: 1.5rem;
+    position: absolute;
+}
+
+#reaper{
+    width:15rem; margin-left: 3rem; margin-right: 2rem;
+}
+
+@media screen and (max-width: 1450px){
     #title{
-        display: none;
+        font-size: 2.5rem;
+        margin-top: 2rem;
     }
 }
+
+@media screen and (max-width: 1350px){
+    #leftToRight{
+        margin-bottom: 10rem;
+        margin-right: 4.9rem;
+        flex-grow: 1;
+    }
+    #title{
+        font-size: 2rem;
+        margin-top: 2.5rem;
+        transform:translate(-50%,0%); 
+    }
+    #counts{
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 1150px){
+#title{
+    display: none;
+}
+}
+
+@media screen and (max-width: 850px){
+    #counts{
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    #commentContainer{
+        margin-top: 33rem;
+        padding-right: 0;
+    }
+
+    #mapContainer{
+        display: flex;
+        flex-wrap: wrap;
+        height: 55rem;
+    }
+
+    #Map{
+        flex-grow: 1;
+    }
+
+    #counts{
+        /* text-align: left; */
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #generateBtn{
+        font-size: 3rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #generateTotal{
+        font-size: 3rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #generateSex{
+        font-size:1.5rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #generateRace{
+        font-size:1.5rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #generateSexAndRace{
+        font-size: 1.5rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #commentContainer{
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    #comment{
+        display: inline-block;
+        height: 10rem;
+    }
+
+    #reaper{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 @media screen and (max-width: 600px){
     .container{

@@ -35,7 +35,7 @@ var sketch1 = function (f1) {
 
       if (f1.startHeight[j] < f1.randomHeight[j]) {
         f1.startHeight[j] = f1.startHeight[j] + f1.randomSpeed[j];
-        f1.circle(w + (f1.width / 25) * j, f1.startHeight[j], f1.width / 20);
+        f1.circle(w + (f1.width / 25) * j, f1.startHeight[j], f1.width / 21);
       }
     }
     // console.log("drawn")
@@ -110,7 +110,9 @@ let dropArray = [
     "fullName": "Mental and Behavioral Disorders due to Accidental Poisoning and Other Psychoactive Substance Use (F11-F16, F18-F19, X40-X42, X44)",
     "name": "Mental and Behavioral Disorders due to Accidental Poisoning",
     "image": "imgs/毒.png",
-    "comment": `Mental and behavioral disorders due to accidental poisoning? I don't even know what that is!`
+    "comment": `Mental and behavioral disorders due to accidental poisoning? I don't even know what that is!<br>
+              <br>
+              Cancer's autographs are piled next to the trashcan by the way.`
   },
 
   {
@@ -128,7 +130,7 @@ let dropArray = [
     "image": "imgs/流感.png",
     "comment": `It is the post-pandemic era now so people might be super familiar to this disease right now. <br>
                <br>
-               This guy is getting cocky, which is bad for our workplace. It's good to suppress it a little.`
+               This guy is getting cocky, which is bad for our workplace. It's good to let humans suppress it a little.`
   },
 
   {
@@ -331,7 +333,7 @@ function retrieveData() {
     generateRace.innerHTML = `${raceDrop.value}: ${raceDeathCounts} `
 
     let generateSexAndRace = document.getElementById("generateSexAndRace")
-    generateSexAndRace.innerHTML = `${sexDrop.value} and ${raceDrop.value}: <br>${raceDeathCounts+sexDeathCounts}`
+    generateSexAndRace.innerHTML = `${sexDrop.value} and ${raceDrop.value}: ${raceDeathCounts+sexDeathCounts}`
 
     console.log('data retrieved')
 
@@ -351,7 +353,7 @@ function drawMap(){
     f2.sizeArray = []
   
     f2.setup = function () {
-      f2.createCanvas(500, 465);
+      f2.createCanvas(420, 430);
   
       // console.log("all Death reasure: "+allDeathCounts)
   
