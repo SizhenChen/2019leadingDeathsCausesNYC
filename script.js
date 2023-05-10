@@ -1,3 +1,6 @@
+
+
+
 var sketch1 = function (f1) {
   f1.randomHeight = [];
   f1.randomSpeed = [];
@@ -264,17 +267,17 @@ function retrieveData() {
         if (
           data[i].year == 2019 &&
           data[i].leading_cause ==
-            causeDropdown.value
+          causeDropdown.value
         ) {
           // console.log(data[i].deaths);
           allDeathCounts = allDeathCounts + parseInt(data[i].deaths);
         }
       }
-    
+
       console.log(causeDropdown.value);
 
       // document.getElementById("total").append(allDeathCounts);
-      console.log("all: "+allDeathCounts);
+      console.log("all: " + allDeathCounts);
 
       sexDeathCounts = 0;
 
@@ -282,14 +285,14 @@ function retrieveData() {
         if (
           data[k].year == 2019 &&
           data[k].leading_cause ==
-            causeDropdown.value &&
+          causeDropdown.value &&
           data[k].sex == sexDropdown.value
         ) {
           sexDeathCounts = sexDeathCounts + parseInt(data[k].deaths);
         }
       }
 
-      console.log("sex: "+sexDeathCounts);
+      console.log("sex: " + sexDeathCounts);
 
       raceDeathCounts = 0;
 
@@ -297,112 +300,118 @@ function retrieveData() {
         if (
           data[j].year == 2019 &&
           data[j].leading_cause ==
-            causeDropdown.value &&
+          causeDropdown.value &&
           data[j].race_ethnicity == raceDropdown.value
         ) {
           raceDeathCounts = raceDeathCounts + parseInt(data[j].deaths);
         }
       }
 
-      console.log("race: "+raceDeathCounts);
-    
-    
+      console.log("race: " + raceDeathCounts);
+
+
       SexAndRaceDeathCounts = 0
-    
+
       for (let l = 0; l < data.length; l++) {
         if (
           data[l].year == 2019 &&
           data[l].leading_cause ==
-            causeDropdown.value &&
+          causeDropdown.value &&
           data[l].race_ethnicity == raceDropdown.value &&
           data[l].sex == sexDropdown.value
         ) {
           SexAndRaceDeathCounts = SexAndRaceDeathCounts + parseInt(data[l].deaths);
         }
       }
-    console.log("sex and race: "+SexAndRaceDeathCounts);
-    
+      console.log("sex and race: " + SexAndRaceDeathCounts);
 
-    let generateTotal = document.getElementById("generateTotal")
-    generateTotal.innerHTML = `Total Deaths: ${allDeathCounts} `
 
-    let sexDrop = document.getElementById("sexDropdown")
-    let generateSex = document.getElementById("generateSex")
-    generateSex.innerHTML = `${sexDrop.value}: ${sexDeathCounts} `
+      let generateTotal = document.getElementById("generateTotal")
+      generateTotal.innerHTML = `Total Deaths: ${allDeathCounts} `
 
-    let raceDrop = document.getElementById("raceDropdown")
-    let generateRace = document.getElementById("generateRace")
-    generateRace.innerHTML = `${raceDrop.value}: ${raceDeathCounts} `
+      let sexDrop = document.getElementById("sexDropdown")
+      let generateSex = document.getElementById("generateSex")
+      generateSex.innerHTML = `${sexDrop.value}: ${sexDeathCounts} `
 
-    let generateSexAndRace = document.getElementById("generateSexAndRace")
-    generateSexAndRace.innerHTML = `${sexDrop.value} and ${raceDrop.value}: ${raceDeathCounts+sexDeathCounts}`
+      let raceDrop = document.getElementById("raceDropdown")
+      let generateRace = document.getElementById("generateRace")
+      generateRace.innerHTML = `${raceDrop.value}: ${raceDeathCounts} `
 
-    console.log('data retrieved')
+      let generateSexAndRace = document.getElementById("generateSexAndRace")
+      generateSexAndRace.innerHTML = `${sexDrop.value} and ${raceDrop.value}: ${raceDeathCounts + sexDeathCounts}`
 
-    // document.getElementById("Map").clear()
+      console.log('data retrieved')
 
-    drawMap()
+      // document.getElementById("Map").clear()
+
+      drawMap()
+
 
     });
 }
 
 
-function drawMap(){
+var sketch2 = function (f2) {
 
-  var sketch2 = function (f2) {
-    f2.xArray = []
-    f2.yArray = []
-    f2.sizeArray = []
-  
-    f2.setup = function () {
-      f2.createCanvas(420, 440);
-  
-      // console.log("all Death reasure: "+allDeathCounts)
-  
-      for (let i = 0; i < f2.int(allDeathCounts / 10); i++) {
-  
-        let randomX = f2.random(f2.width / 8, (f2.width / 8) * 7);
-        let randomY = f2.random(f2.height / 8, (f2.height / 8) * 7);
-        let randomSize = f2.random(f2.width / 40, f2.width / 8)
-  
-        f2.xArray.push(randomX)
-        f2.yArray.push(randomY)
-        f2.sizeArray.push(randomSize)
-  
-      }
-      // console.log("xArray: "+xArray)
-  
-    }
-  
-    f2.draw = function () {
-      f2.background(255, 0)
-      f2.frameRate(18)
-      // console.log("all Death reasure: "+allDeathCounts/10)
-  
-      for (let i = 0; i < f2.int(allDeathCounts / 10); i++) {
-  
-        if (i < allDeathCounts / 10 - SexAndRaceDeathCounts / 10) {
-          f2.strokeWeight(3)
-          f2.fill(255)
-        } else {
-          f2.strokeWeight(6)
-          f2.fill(223, 225, 247)
-        }
-  
-        f2.smooth()
-  
-        f2.circle(f2.xArray[i] + f2.random(0, 2), f2.yArray[i] + f2.random(0, 3), f2.sizeArray[i] + f2.random(0, 5));
-        // console.log('firing')
-  
-      }
-  
-    }
-    console.log("drawn")
+  f2.setup = function () {
+    // remove()
+
+    f2.createCanvas(420, 440);
+
   }
-  
-  let canvas = new p5(sketch2,"Map")
-  // canvas.parent("Map")
 }
+
+
+function drawMap() {
+  console.log(canvas)
+
+  canvas.background(255)
+
+  canvas.xArray = []
+  canvas.yArray = []
+  canvas.sizeArray = []
+
+  for (let i = 0; i < parseInt(allDeathCounts / 10); i++) {
+
+    canvas.randomX = canvas.random(canvas.width / 8, (canvas.width / 8) * 7);
+    canvas.randomY = canvas.random(canvas.height / 8, (canvas.height / 8) * 7);
+    canvas.randomSize = canvas.random(canvas.width / 40, canvas.width / 8)
+
+    canvas.xArray.push(canvas.randomX)
+    canvas.yArray.push(canvas.randomY)
+    canvas.sizeArray.push(canvas.randomSize)
+  }
+
+  canvas.draw = function () {
+    // f2.background(255, 0)
+
+    canvas.frameRate(18)
+    // console.log("all Death reasure: "+allDeathCounts/10)
+
+    for (let i = 0; i < parseInt(allDeathCounts / 10); i++) {
+
+      if (i < allDeathCounts / 10 - SexAndRaceDeathCounts / 10) {
+        canvas.strokeWeight(3)
+        canvas.fill(255)
+      } else {
+        canvas.strokeWeight(6)
+        canvas.fill(223, 225, 247)
+      }
+
+      canvas.smooth()
+
+      canvas.circle(canvas.xArray[i] + canvas.random(0, 2), canvas.yArray[i] + canvas.random(0, 3), canvas.sizeArray[i] + canvas.random(0, 5));
+      // console.log('firing')
+
+    }
+  }
+
+}
+
+
+let canvas = new p5(sketch2, "Map")
+// canvas.parent("Map")
+
 
 
 
