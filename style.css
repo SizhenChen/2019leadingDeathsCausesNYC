@@ -3,6 +3,11 @@ body{
     /* background-size: 60%; */
     margin: 0;
     font-family: hobeaux, sans-serif;
+    background: #dfe1f7;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 #bg {
@@ -116,19 +121,21 @@ select:hover {
 }
 
 #generateTotal{
-    margin: 1rem; margin-top: 2rem;
+    margin: 1rem; margin-top: 1rem;
 }
 
 #generateSex{
+    font-weight: 400;
     margin: 0.2rem;
 }
 
 #generateRace{
+    font-weight: 400;
     margin: 0.2rem;
 }
 
 #generateSexAdnRace{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 #mapContainer{
@@ -176,6 +183,10 @@ select:hover {
     box-shadow: 0px 0px 0px 4px rgba(0,0,0);
     border-radius: 1rem;
     padding: 2rem;
+}
+
+#comment::-webkit-scrollbar{
+    display: none;
 }
 
 #title{

@@ -4,19 +4,19 @@ var sketch1 = function (f1) {
   f1.startHeight = [];
 
   f1.setup = function () {
-    f1.createCanvas(f1.windowWidth, f1.windowHeight+400);
+    f1.createCanvas(f1.windowWidth, f1.windowHeight + 350);
     let c1 = f1.color(255);
     let c2 = f1.color(223, 230, 247);
 
-    for (let y = 0; y < f1.windowHeight+400; y++) {
-      let n = f1.map(y, 0, f1.windowHeight+200, 0, 1);
+    for (let y = 0; y < f1.windowHeight + 350; y++) {
+      let n = f1.map(y, 0, f1.windowHeight + 350, 0, 1);
       let newc = f1.lerpColor(c1, c2, n);
       f1.stroke(newc);
       f1.line(0, y, f1.windowWidth, y);
     }
 
     for (let i = 0; i < 26; i++) {
-      f1.randomHeight[i] = f1.random(-200, f1.windowHeight+400 / 1.01);
+      f1.randomHeight[i] = f1.random(-200, f1.windowHeight + 350 / 1.01);
       f1.startHeight[i] = f1.random(-200, 0);
     }
   }
@@ -353,7 +353,7 @@ function drawMap(){
     f2.sizeArray = []
   
     f2.setup = function () {
-      f2.createCanvas(420, 430);
+      f2.createCanvas(420, 440);
   
       // console.log("all Death reasure: "+allDeathCounts)
   
