@@ -208,7 +208,9 @@ let dropArray = [
     "fullName": "All Other Causes",
     "name": "All Other Causes",
     "image": "imgs/其它原因.png",
-    "comment": ``
+    "comment": `Although there are tons of causes we haven't mentioned, they also deserve a place on this site.<br>
+               <br>
+               So yeah, this is like a consolation prize for them. Good job losers!`
   },
 ]
 
