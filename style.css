@@ -134,8 +134,9 @@ select:hover {
     margin: 0.2rem;
 }
 
-#generateSexAdnRace{
-    margin-top: 1rem;
+#generateSexAndRace{
+    /* color: #b0b3d8; */
+    margin-top: 1.5rem;
 }
 
 #mapContainer{
@@ -200,6 +201,19 @@ select:hover {
 
 #reaper{
     width:15rem; margin-left: 3rem; margin-right: 2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+#reaper:hover{
+    /* background-color: #dfe1f7; */
+    /* border: 3px solid black; */
+    cursor: pointer;
+}
+
+#reaper:active{
+    box-shadow: 0px 0px 0;
+    transform: translate(2px, 2px);
 }
 
 @media screen and (max-width: 1450px){
