@@ -1,3 +1,4 @@
+//new array for selecting profile images and comments
 let dropArray = [
   {
     "fullName": "Diseases of Heart (I00-I09, I11, I13, I20-I51)",
@@ -132,7 +133,7 @@ let dropArray = [
   },
 ]
 
-
+//first canvas in back ground, using instance mode to create more than one ps.j5 drawings on webpage
 var sketch1 = function (f1) {
   f1.randomHeight = [];
   f1.randomSpeed = [];
@@ -196,7 +197,7 @@ var bgCanvas = new p5(sketch1, "bg")
 
 // });
 
-
+//after selecting the drop menu on left, show corresponding image and name of the cause, and comment of reaper
 let diseasesDrop = document.getElementById("diseasesDropdown")
 diseasesDrop.addEventListener('change', getData)
 console.log(diseasesDrop.value)
@@ -215,7 +216,7 @@ function getData() {
   }
 }
 
-
+//toggle (hide and show) the drop menu when clicking drop buttons
 function causesDrop() {
   document.getElementById("diseasesDropdown").classList.toggle("show");
 }
@@ -228,6 +229,7 @@ function raceDrop() {
   document.getElementById("raceDropdown").classList.toggle("show");
 }
 
+//retrieve data to form the moving image
 let allDeathCounts; //all deaths of the chosen disease in year 2019
 
 let raceDeathCounts; //deaths of the chosen race in the chosen disease in 2019
@@ -341,6 +343,7 @@ function retrieveData() {
 }
 
 
+//new instance for the another canvas in #mapContainer, make the canvas only created once
 var sketch2 = function (f2) {
 
   f2.setup = function () {
@@ -351,7 +354,7 @@ var sketch2 = function (f2) {
   }
 }
 
-
+//make what is inside the canvas another function, and call it everytime when the retrieve data function runs (clicking generate button)
 function drawMap() {
   console.log(canvas)
 
