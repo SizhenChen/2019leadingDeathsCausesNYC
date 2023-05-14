@@ -21,6 +21,10 @@ body::-webkit-scrollbar{
     margin: 2rem 3rem;
 }
 
+#leftToRight{
+    margin-top:0.5rem;
+}
+
 #rightToLeft{
     float: right;
     margin-top: 2rem;
@@ -149,7 +153,7 @@ select:hover {
     font-weight: 900;
     font-family: hobeaux, sans-serif;
     height: 525px;
-    margin-top: 8rem; 
+    margin-top: 7.5rem; 
 }
 
 #Map{
