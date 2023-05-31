@@ -349,7 +349,13 @@ var sketch2 = function (f2) {
   f2.setup = function () {
     // remove()
 
-    f2.createCanvas(420, 440);
+    if(f2.windowWidth<400){
+      f2.createCanvas(300, 300);
+    }else{
+      f2.createCanvas(420, 440);
+    }
+
+    // f2.createCanvas(420, 440);
 
   }
 }

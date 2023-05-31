@@ -1,4 +1,4 @@
-body{
+body {
     /* background: url(imgs/bloodRain.png); */
     /* background-size: 60%; */
     margin: 0;
@@ -6,7 +6,7 @@ body{
     background: #dfe1f7;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -17,18 +17,14 @@ body::-webkit-scrollbar{
     z-index: -1;
 }
 
-.container{
+.container {
     margin: 2rem 3rem;
 }
 
-/* #leftToRight{
-    margin-top:0.5rem;
-} */
-
-#rightToLeft{
+#rightToLeft {
     float: right;
     margin-top: 2rem;
-    flex-grow: 1; 
+    flex-grow: 1;
     height: 500px;
 }
 
@@ -43,20 +39,20 @@ body::-webkit-scrollbar{
     border-radius: 1rem;
     border: 3px solid black;
     cursor: pointer;
-    box-shadow: 3px 3px 0px 0 rgba(0,0,0);
+    box-shadow: 3px 3px 0px 0 rgba(0, 0, 0);
     margin-bottom: 0.1rem;
 }
 
-.dropBtn:hover{
+.dropBtn:hover {
     background-color: #b91849;
 }
 
-.dropBtn:active{
+.dropBtn:active {
     box-shadow: 0px 0px 0;
     transform: translate(2px, 2px);
 }
 
-.dropContent{
+.dropContent {
     display: none;
     background-color: #dfe1f7;
     margin: 0.5rem 0rem;
@@ -69,7 +65,7 @@ body::-webkit-scrollbar{
     width: 30rem;
 }
 
-select > option{
+select>option {
     cursor: pointer;
 }
 
@@ -77,16 +73,17 @@ select:hover {
     cursor: pointer;
 }
 
-.show {display:block;}
+.show {
+    display: block;
+}
 
-#profiles{
+#profiles {
     background-color: white;
-    /* color: white; */
-/*     margin-top: 0.7rem; */
     margin-bottom: 1rem;
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0);
     border-radius: 1rem;
     text-align: center;
+    margin-top: 7rem;
     padding: 1rem;
     font-size: 1.8rem;
     font-weight: 900;
@@ -95,57 +92,63 @@ select:hover {
     height: 100%;
 }
 
-#Name{
+#Name {
     margin-bottom: 1rem;
 }
 
-#Image{
+#Image {
     width: 25rem;
 }
 
-#raceDropdown{
+.turnLeftOnPhone {
+    float: right;
+    margin-left: 2rem;
+}
+
+#raceDropdown {
     width: 13rem;
     margin-right: 0;
 }
 
-#sexBtn{
+#sexBtn {
     margin-left: 0rem;
 }
 
-#sexDropdown{
+#sexDropdown {
     width: 6rem;
-    margin-right:0; 
+    margin-right: 0;
 }
 
-#generateBtn{
+#generateBtn {
     margin: 1rem;
     background-color: rgb(255, 205, 80);
     color: black;
     font-size: 2.5rem;
 }
 
-#generateTotal{
-    margin: 1rem; margin-top: 1rem;
+#generateTotal {
+    margin: 1rem;
+    margin-top: 1rem;
 }
 
-#generateSex{
+#generateSex {
     font-weight: 400;
     margin: 0.2rem;
 }
 
-#generateRace{
+#generateRace {
     font-weight: 400;
     margin: 0.2rem;
 }
 
-#generateSexAndRace{
+#generateSexAndRace {
     /* color: #b0b3d8; */
     margin-top: 1.5rem;
 }
 
-#mapContainer{
+#mapContainer {
     background-color: #ffffff;
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0);
     border-radius: 1rem;
     text-align: center;
     padding-top: 1rem;
@@ -153,26 +156,26 @@ select:hover {
     font-weight: 900;
     font-family: hobeaux, sans-serif;
     height: 525px;
-    margin-top: 7.5rem; 
+    margin-top: 7rem;
 }
 
-#Map{
+#Map {
     /* background-color: #e14071; */
     padding: 1rem;
     padding-right: 0;
     padding-left: 0;
 }
 
-#counts{
-    float: right; 
-    width: 18rem; 
+#counts {
+    float: right;
+    width: 18rem;
     padding: 0;
     margin-top: 2.5rem;
 }
 
-#commentContainer{
+#commentContainer {
     background-color: #ffffff;
-    box-shadow: 0px 0px 0px 2px rgba(0,0,0);
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0);
     border-radius: 1rem;
     text-align: center;
     padding: 1rem;
@@ -183,190 +186,278 @@ select:hover {
     margin-top: 10rem;
 }
 
-#comment{
+#comment {
     background-color: #ffffff;
-    box-shadow: 0px 0px 0px 4px rgba(0,0,0);
+    box-shadow: 0px 0px 0px 4px rgba(0, 0, 0);
     border-radius: 1rem;
     padding: 2rem;
 }
 
-#comment::-webkit-scrollbar{
+#comment::-webkit-scrollbar {
     display: none;
 }
 
-#title{
-    left: 50%; 
-    transform:translate(-50%,0%); 
-    font-size:3rem; 
-    font-weight: 700; 
+#title {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 3rem;
+    font-weight: 700;
     margin-top: 1.5rem;
     position: absolute;
 }
 
-#reaper{
-    width:15rem; margin-left: 3rem; margin-right: 2rem;
+#reaper {
+    width: 15rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
     cursor: pointer;
     border-radius: 1rem;
 }
 
-#reaper:hover{
+#reaper:hover {
     /* background-color: #dfe1f7; */
     /* border: 3px solid black; */
     cursor: pointer;
 }
 
-#reaper:active{
+#reaper:active {
     box-shadow: 0px 0px 0;
     transform: translate(2px, 2px);
 }
 
-@media screen and (max-width: 1450px){
-    #title{
+@media screen and (max-width: 1450px) {
+    #title {
         font-size: 2.5rem;
         margin-top: 2rem;
     }
 }
 
-@media screen and (max-width: 1350px){
-    #leftToRight{
-        margin-bottom: 10rem;
+@media screen and (max-width: 1350px) {
+    #leftToRight {
+        margin-bottom: 3rem;
         margin-right: 4.9rem;
         flex-grow: 1;
     }
-    #title{
+
+    #title {
         font-size: 2rem;
         margin-top: 2.5rem;
-        transform:translate(-50%,0%); 
+        transform: translate(-50%, 0%);
     }
-    #counts{
+
+    #counts {
         margin-right: 2rem;
     }
 }
 
-@media screen and (max-width: 1150px){
-#title{
-    display: none;
-}
+@media screen and (max-width: 1150px) {
+    #title {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 850px){
-    #counts{
+@media screen and (max-width: 850px) {
+    #counts {
         margin-right: 2rem;
         margin-left: 2rem;
     }
 
-    #commentContainer{
+    #commentContainer {
         margin-top: 33rem;
         padding-right: 0;
     }
 
-    #mapContainer{
+    #rightToLeft{
+        margin-top: 8rem;
+    }
+
+    #mapContainer {
         display: flex;
         flex-wrap: wrap;
         height: 55rem;
+        /* width: 50rem; */
     }
 
-    #Map{
+    #Map {
         flex-grow: 1;
     }
 
-    #counts{
+    #counts {
         /* text-align: left; */
         flex-grow: 1;
         display: flex;
         flex-wrap: wrap;
     }
 
-    #generateBtn{
+    #generateBtn {
         font-size: 3rem;
         margin: 1rem;
         flex-grow: 1;
     }
 
-    #generateTotal{
+    #generateTotal {
         font-size: 3rem;
         margin: 1rem;
         flex-grow: 1;
     }
 
-    #generateSex{
-        font-size:1.5rem;
-        margin: 1rem;
-        flex-grow: 1;
-    }
-
-    #generateRace{
-        font-size:1.5rem;
-        margin: 1rem;
-        flex-grow: 1;
-    }
-
-    #generateSexAndRace{
+    #generateSex {
         font-size: 1.5rem;
         margin: 1rem;
         flex-grow: 1;
     }
 
-    #commentContainer{
+    #generateRace {
+        font-size: 1.5rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #generateSexAndRace {
+        font-size: 1.5rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #commentContainer {
         flex-wrap: wrap;
         height: 100%;
     }
 
-    #comment{
+    #comment {
         display: inline-block;
         height: 10rem;
     }
 
-    #reaper{
+    #reaper {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 
-@media screen and (max-width: 600px){
-    .container{
-        margin: 1rem;
-        margin-top: 2rem;
+@media screen and (max-width: 600px) {
+    #title {
+        display: block;
+        width: 20rem;
+        font-size: 2.5rem;
     }
 
-    .dropBtn{
+    .container {
+        margin: 1rem;
+        margin-top: 12rem;
+    }
+
+    #leftToRight{
+        margin-bottom: 2rem;
+        margin-right: 4.9rem;
+        flex-grow: 1;
+    }
+
+    .dropBtn {
         font-size: 1.2rem;
         margin-bottom: 0.05rem;
     }
 
-    #generateBtn{
+    #generateBtn {
         font-size: 2rem;
     }
 
-    #rightToLeft{
+    #rightToLeft {
         float: left;
         margin: 0rem 1rem;
+        width: min-content;
+        padding: 0;
     }
-    
-    .dropContent{
+
+    .dropContent {
         font-size: 0.8rem;
         width: 100%;
     }
 
-    #profiles{
-        width: 26rem;
+    #profiles {
+        width: 19rem;
+        height: fit-content;
+        margin-top: 5rem;
     }
 
-    #Name{
+    #Name {
         font-size: 1.2rem;
     }
 
-    #Image{
+    #Image {
         width: 100%;
     }
 
-    #mapContainer{
-        height: 800px;
+    .turnLeftOnPhone{
+        float: left;
+        margin-right: 1rem;
+        margin-left: 0;
     }
 
-    #Map{
-        width: 100%;
-        height: 100%;
+    #sexDropdown {
+        width: 5rem;
+        margin-bottom: -1rem;
     }
+
+    #raceDropdown {
+        width: 5rem;
+        margin-bottom: -1rem;
+    }
+
+    #mapContainer {
+        height: fit-content;
+        width: 21rem;
+        height: 45rem;
+        margin-top: 5rem;
+    }
+
+    #generateBtn {
+        font-size: 2.5rem;
+        width: 15rem;
+        height: 5rem;
+        margin: 0.5rem;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    #generateTotal {
+        font-size: 2rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #generateSex {
+        font-size: 1rem;
+        margin: 0.5rem;
+        flex-grow: 1;
+    }
+
+    #generateRace {
+        font-size: 1rem;
+        margin: 0.5rem;
+        flex-grow: 1;
+    }
+
+    #generateSexAndRace {
+        font-size: 1.2rem;
+        margin: 1rem;
+        flex-grow: 1;
+    }
+
+    #reaper {
+        width: 12rem;
+    }
+
+    #comment {
+        margin: 0rem;
+    }
+
+    #commentContainer {
+        flex-wrap: wrap;
+        height: fit-content;
+        width: 20rem;
+        margin-top: 24rem;
+    }
+
 }
