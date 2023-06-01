@@ -349,9 +349,9 @@ var sketch2 = function (f2) {
   f2.setup = function () {
     // remove()
 
-    if(f2.windowWidth<400){
+    if (f2.windowWidth < 400) {
       f2.createCanvas(300, 300);
-    }else{
+    } else {
       f2.createCanvas(420, 440);
     }
 
@@ -411,9 +411,9 @@ let canvas = new p5(sketch2, "Map")
 // canvas.parent("Map")
 
 
-function showsInstructions(){
-   let comment = document.getElementById("comment")
-   comment.innerHTML = `Feeling lost again? Fine, I'll repeat the instructions. <br>
+function showsInstructions() {
+  let comment = document.getElementById("comment")
+  comment.innerHTML = `Feeling lost again? Fine, I'll repeat the instructions. <br>
    <br>First, choose the cause of death that you're interested in on the left. Then go 
    the right to choose the victims' sex and race. Click on the "Generate" button 
    to see the moving image.<br>
