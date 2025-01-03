@@ -250,10 +250,15 @@ let sexDropdown = document.getElementById("sexDropdown");
 // sexDropdown.addEventListener("change", retrieveData);
 
 function retrieveData() {
-  fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json") //原链接：https://data.cityofnewyork.us/resource/jb7j-dtam.json
+  fetch("https://cors-anywhere.herokuapp.com/https://data.cityofnewyork.us/resource/jb7j-dtam.json")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+
+      // fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json")
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     console.log(data);
 
       allDeathCounts = 0;
 
@@ -267,6 +272,7 @@ function retrieveData() {
           allDeathCounts = allDeathCounts + parseInt(data[i].deaths);
         }
       }
+
 
       console.log(causeDropdown.value);
 
