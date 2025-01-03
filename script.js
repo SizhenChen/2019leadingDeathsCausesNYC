@@ -250,8 +250,7 @@ let sexDropdown = document.getElementById("sexDropdown");
 // sexDropdown.addEventListener("change", retrieveData);
 
 function retrieveData() {
-  fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json")
-    // fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json")
+  fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json")//有bug!fetch不到data!1.9修！
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
@@ -264,7 +263,7 @@ function retrieveData() {
           data[i].leading_cause ==
           causeDropdown.value
         ) {
-          // console.log(data[i].deaths);
+           console.log(data[i].deaths);
           allDeathCounts = allDeathCounts + parseInt(data[i].deaths);
         }
       }
