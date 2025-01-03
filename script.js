@@ -251,14 +251,10 @@ let sexDropdown = document.getElementById("sexDropdown");
 
 function retrieveData() {
   fetch("https://cors-anywhere.herokuapp.com/https://data.cityofnewyork.us/resource/jb7j-dtam.json")
+    // fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-
-      // fetch("https://data.cityofnewyork.us/resource/jb7j-dtam.json")
-      //   .then((response) => response.json())
-      //   .then((data) => {
-      //     console.log(data);
 
       allDeathCounts = 0;
 
